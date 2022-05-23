@@ -1,0 +1,78 @@
+.catalog_screen_toner
+.catalog 
+    .catalog_close Закрыть (Esc)
+    ul.root-nav
+        li
+            a(href='#') Рейлинги для кухни
+        li
+            span Кухонная посуда
+            ul.sub-nav
+                li
+                    a(href='#') Сковороды-гриль
+                li
+                    a(href='#') Блинные сковороды
+                li
+                    a(href='#') Сковороды из нержавейки
+                li
+                    a(href='#') Сотейники
+        li
+            a(href='#') Кухонная утварь
+        li
+            a(href='#') Чайники
+        li
+            span Разделочные доски
+            ul.sub-nav
+                li
+                    a(href='#') Разделочные доски из стекла
+                li
+                    a(href='#') Разделочные доски из пластика
+                li
+                    span Разделочные доски из дерева
+                    ul.sub-nav
+                        li
+                            a(href='#') Разделочные доски из дуба
+                        li
+                            a(href='#') Разделочные доски из ясеня
+                        li
+                            span Разделочные доски из клёна
+                            ul.sub-nav
+                                li
+                                    a(href='#') Разделочные доски из клёна зимние
+                                li
+                                    a(href='#') Разделочные доски из клёна летние
+                                li
+                                    a(href='#') Разделочные доски из клёна весенние
+                                li
+                                    a(href='#') Разделочные доски из клёна осенние
+                        li
+                            a(href='#') Разделочные доски из берёзы
+                li
+                    a(href='#') Разделочные доски из металла
+
+
+header
+    .header_catalog_btn 
+        svg(width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg')
+            rect(width='40' height='40' fill='none')
+            path(d='M10 10H30' stroke='#999999' stroke-width='3' stroke-linecap='round')
+            path(d='M10 30H30' stroke='#999999' stroke-width='3' stroke-linecap='round')
+            path(d='M10 20H30' stroke='#999999' stroke-width='3' stroke-linecap='round')
+
+
+    a.header_logo(href="/") 
+        img.header_logo_icon(src='./img/header_logo_50x50.png') 
+        span.header_logo_text reiling.ru
+
+    .header_search 
+        form(action="") 
+            input.header_search_input(type="text" placeholder="Поиск")
+            button.header_search_submit
+
+    a.header_cart_info(href='/') 
+        .header_cart_info_icon 
+            span.header_cart_info_icon_qtn 0
+        .header_cart_info_text 
+            .header_cart_info_text_title Товаров:
+            .header_cart_info_text_value 0 шт
+            .header_cart_info_text_title На сумму:
+            .header_cart_info_text_value 0 руб

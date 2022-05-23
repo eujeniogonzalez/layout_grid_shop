@@ -1,0 +1,137 @@
+.reviews_wrapper {
+    width: 100%;
+
+    .reviews {
+        width: 100%;
+        @include flex (false, center, column);
+        margin: auto;
+        background: linear-gradient(45deg, #5A98F2 0%, #67C3F3 100%);
+        border-radius: 10px;
+        overflow: hidden;
+        color: white;
+
+        .reviews_slider {
+            width: 100%; // height will calculate by js
+            position: relative;
+
+            .slider_item {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 100px;
+                padding: 50px 120px;
+                position: absolute;
+                transition: transform 1s;
+                box-sizing: border-box;
+                background: radial-gradient(at 25% 25%, rgba(255, 255, 255, 0.5), transparent);
+
+                .slider-item-img {
+                    @include flex (center, center, false);
+
+                    & img {
+                        width: 100%;
+
+                        @media screen and (max-width: $breakpoint-tablet-small) {
+                            width: 70%;
+                        }
+                    }
+                }
+
+                .slider-item-text {
+                    .slider-item-text-title {
+                        font-size: 30px;
+                        margin-bottom: 50px;
+                    }
+
+                    .slider-item-text-description {
+                        line-height: 25px;
+                    }
+                }
+
+                @media screen and (max-width: $breakpoint-tablet-medium) {
+                    padding: 50px 50px;
+                }
+
+                @media screen and (max-width: $breakpoint-tablet-small) {
+                    grid-template-columns: 1fr;
+                }
+
+                @media screen and (max-width: $breakpoint-mobile-big) {
+                    padding: 50px 20px;
+                }
+            }
+
+            .item-1 {
+                background-color: coral;
+            }
+
+            .item-2 {
+                background-color: plum;
+            }
+
+            .item-3 {
+                background-color: pink;
+            }
+
+            .item-4 {
+                background-color: crimson;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-tablet-small) {
+            background: linear-gradient(45deg, #5A98F2 0%, #67C3F3 100%);
+        }
+
+        @media screen and (max-width: $breakpoint-mobile_big) {
+            width: 90%;
+        }
+    }
+
+    .reviews_slider_navigation {
+        width: 100%;
+        @include flex (center, false, false);
+        margin: 5px auto 20px auto;
+
+        .button_right,
+        .button_left {
+            @include size (60px, 40px, false, false);
+            @include flex (center, center, false);
+            cursor: pointer;
+
+            & svg {
+                @include size (32px, 20px, false, false);
+                fill: $color_main;
+            }
+        }
+
+        .bullets {
+            @include flex (center, center, false);
+            margin: 0 70px;
+
+            .bullet_item {
+                @include size (10px, 10px, false, false);
+                border-radius: 50%;
+                background-color: $color_main;
+                opacity: 30%;
+                margin: 0 10px;
+
+                @media screen and (max-width: $breakpoint-mobile_big) {
+                    @include size (7px, 7px, false, false);
+                    margin: 0 5px;
+                }
+            }
+
+            .bullet_item_active {
+                opacity: 100%;
+            }
+
+            @media screen and (max-width: $breakpoint-mobile_big) {
+                margin: 0 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakopint-desktop) {
+        background-position: left 10px top 70%;
+    }
+}

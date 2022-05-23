@@ -1,0 +1,10 @@
+extends ./../layouts/main.pug
+
+block variables
+    - const title = "Рейлинг Ру - главная страница";
+
+block content
+    main
+        include ./../sections/_homepage_slider.pug
+        include ./../sections/_homepage_categories.pug
+        include ./../sections/_visited_products.pug

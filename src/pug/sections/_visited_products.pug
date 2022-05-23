@@ -1,0 +1,26 @@
+mixin show_product(img_name, title, price)
+    .visited_product_item
+        .visited_products_content 
+            .product_img 
+                img(src=`./img/goods/${img_name}.jpg`, alt="")
+            .product_info 
+                .product_info_title= title
+                .product_info_price 
+                    span= price 
+                    |  руб.
+                .product_info_btn
+                    button Купить
+
+.visited_products_wrapper 
+    h2 Вы смотрели эти товары
+    .visited_products 
+        +show_product('722212_small', 'Разделочная доска Nadoba', '553')
+        +show_product('722616_small', 'Набор ножей Nadoba', '553')
+        +show_product('723016_small', 'Набор ножей Nadoba', '553')
+        +show_product('726913_small', 'Кастрюля из нержавейки Nadoba', '553')
+        +show_product('728312_small', 'Кастрюля из литого алюминия Nadoba', '553')
+        +show_product('728521_small', 'Сковорода для блинов Nadoba', '553')
+        +show_product('731002_small', 'Чайник со свистком Nadoba', '553')
+        +show_product('741015_small', 'Набор для специй Nadoba', '553')
+        +show_product('761117_small', 'Антипригарная форма для выпечки Nadoba', '553')
+        +show_product('762015_small', 'Силиконовая форма для выпечки Nadoba', '553')

@@ -1,0 +1,94 @@
+.visited_products_wrapper {
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .visited_products {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+
+        .visited_product_item {
+
+            .visited_products_content {
+                background-color: white;
+                padding: 10px;
+                border: 1px solid #cccccc;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    box-shadow: 0px 0px 20px 4px rgba(163, 163, 163, 0.5);
+                }
+
+                .product_img {
+                    display: flex;
+                    justify-content: center;
+
+                    & img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .product_info {
+                    .product_info_title {
+                        padding-top: 20px;
+                        min-height: 70px;
+                    }
+                    .product_info_price {
+                        display: flex;
+                        justify-content: center;
+                        align-items: baseline;
+                        padding: 20px 0;
+
+                        & span {
+                            font-size: 36px;
+                            font-weight: bold;
+                        }
+                    }
+                    .product_info_btn {
+                        & button {
+                            width: 100%;
+                            padding: 15px 10px;
+                            background-color: $color-main;
+                            border: none;
+                            border-radius: 5px;
+                            color: white;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $color-main-dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint-tablet-medium) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: $breakpoint-tablet-small) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: $breakpoint-mobile-big) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: $breakpoint-mobile-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
