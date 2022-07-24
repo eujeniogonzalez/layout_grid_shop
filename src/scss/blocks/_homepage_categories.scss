@@ -13,6 +13,11 @@
         border-radius: 10px;
         padding: 20px;
         position: relative;
+        transition: all ease-out 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
 
         .category-item-toner {
             position: absolute;
@@ -23,7 +28,7 @@
             height: 100%;
             background-color: black;
             opacity: 0;
-            transition: opacity ease-out 0.5s;
+            transition: all ease-out 0.3s;
 
             &:hover {
                 opacity: 0.1;
